@@ -22,6 +22,7 @@ class App extends Component {
     const city = event.target.city.value
     const country = event.target.country.value
     // Call API
+    // The await operator is used to wait for a Promise. It can only be used inside an async function.
     const apiCall = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`)
     const data = await apiCall.json()
     
